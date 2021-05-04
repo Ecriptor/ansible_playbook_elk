@@ -1,0 +1,9 @@
+- hosts: elk
+  gather_facts: yes
+  become: yes
+#  become_user: root
+  become_method: sudo
+  roles:
+    - java
+    - elastic
+    - kibana       
